@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ProductCard } from '../Product/ProductCard'
 
 export function Hero() {
 	return (
@@ -24,8 +25,21 @@ export function Hero() {
 						</span>
 					</div>
 				</div>
-				<div className="md:w-1/4 w-full">
-					<div className="rounded border-gray-300  dark:border-gray-700 border-dashed border-2 h-24" />
+				<div className="md:w-1/4 w-full flex flex-col justify-center">
+					<div className="flex flex-col space-y-6 max-w-[200px] mx-auto">
+						<ProductCard
+							image="/assets/images/handbag.png"
+							price={24}
+							title="LV Handbag"
+							imageAlt="Image of handbag"
+						/>
+						<ProductCard
+							image="/assets/images/handbag2.png"
+							price={24}
+							title="Not LV Handbag"
+							imageAlt="Image of handbag"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
