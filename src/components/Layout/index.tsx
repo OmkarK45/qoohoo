@@ -1,19 +1,21 @@
 import { Hero } from '../Hero'
 import { Navbar } from '../Navbar/Navbar'
+import { Footer } from './Footer'
+import { Sidebar } from './Sidebar'
 
 export function PageLayout() {
 	return (
-		<div className="container mx-auto">
-			<div className="flex flex-wrap">
-				<div className="md:w-3/4 w-full md:pr-6">
+		<div>
+			<div className="flex min-h-[90vh] h-auto flex-wrap ">
+				<div className="md:w-3/4 w-full ">
 					<Navbar />
 					<Hero />
-					Footer
 				</div>
-				<div className="md:w-1/4 w-full">
-					<div className="rounded border-gray-300  dark:border-gray-700 border-dashed border-2 h-24" />
+				<div className="md:w-1/4 w-full relative border-l-2 border-gray-300">
+					<Sidebar />
 				</div>
 			</div>
+			<Footer />
 		</div>
 	)
 }
