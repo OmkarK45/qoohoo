@@ -63,7 +63,7 @@ export function Navbar() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="flex items-center space-x-4"
+				className="flex items-center space-x-4 pr-2"
 			>
 				<div>
 					<div className="relative p-2">
