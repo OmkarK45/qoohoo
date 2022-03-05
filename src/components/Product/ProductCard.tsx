@@ -17,7 +17,7 @@ export function ProductCard({
 	imageAlt,
 }: ProductCardProps) {
 	return (
-		<div className="px-3 py-2 flex justify-between border border-gray-100 space-x-4 shadow-xl bg-white rounded-xl ">
+		<div className="cursor-pointer px-3 py-2 flex justify-between border border-gray-100 space-x-4 shadow-xl bg-white rounded-xl ">
 			<div className="flex flex-col justify-center w-1/2">
 				<h1 className="text-gray-800">{title}</h1>
 				<p className="font-medium">${price}</p>
