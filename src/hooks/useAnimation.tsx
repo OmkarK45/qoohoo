@@ -11,7 +11,7 @@ const INITIAL_STATE: AnimationProviderType = {
 	setIsAnimating: () => {},
 }
 
-const AnimationContext = createContext(INITIAL_STATE)
+const AnimationContext = createContext<AnimationProviderType>(INITIAL_STATE)
 
 export function AnimationProvider({ children }: { children: ReactNode }) {
 	const [isAnimating, setIsAnimating] = useState(true)
