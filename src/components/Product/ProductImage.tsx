@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTabs } from '../../hooks/useTabs'
 
 interface ProductImageProps {
 	imageSrc: string
@@ -8,14 +9,21 @@ interface ProductImageProps {
 }
 
 export function ProductImage({ imageSrc, label, index }: ProductImageProps) {
+	const { setCurrentImage } = useTabs()
 	return (
-		<motion.div
+		<motion.button
 			key={imageSrc}
 			className="bg-green-100 w-20 h-32 overflow-hidden cursor-pointer"
 			initial={{ x: 200, opacity: 0 }}
 			animate={{ x: 0, opacity: 1 }}
 			transition={{ duration: 0.5, delay: (index + 1) * 0.2 }}
 			exit={{ x: -200, opacity: 0 }}
+			onClick={() =>
+				setCurrentImage({
+					imageSrc,
+					label,
+				})
+			}
 		>
 			<Image
 				src={imageSrc}
@@ -26,6 +34,6 @@ export function ProductImage({ imageSrc, label, index }: ProductImageProps) {
 				objectPosition="top center"
 				priority
 			/>
-		</motion.div>
+		</motion.button>
 	)
 }
