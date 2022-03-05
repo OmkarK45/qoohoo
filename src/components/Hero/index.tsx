@@ -13,7 +13,7 @@ export function Hero() {
 	const { isAnimating } = useAnimation()
 
 	return (
-		<div className="flex flex-col h-full relative">
+		<div className="flex flex-col  h-full relative">
 			<div className="container mx-auto h-full flex flex-wrap ">
 				<div className="md:w-5/6 w-full pb-6 md:pb-0 md:pr-6 flex items-center ">
 					<div className="flex flex-col flex-1 ml-24 justify-between">
@@ -30,9 +30,10 @@ export function Hero() {
 						</AnimatePresence>
 					</div>
 
-					<ModelImage />
-
-					<Blobs />
+					<AnimatePresence>
+						<ModelImage />
+						<Blobs />
+					</AnimatePresence>
 				</div>
 
 				{isAnimating ? (
