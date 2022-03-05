@@ -7,7 +7,8 @@ import { ProductDetailsButton } from '../Product/ProductDetailsButton'
 
 import { Blobs } from './Blobs'
 import { ModelImage } from './ModelImage'
-import { useAnimation } from '../../hooks/useAnimation'
+
+import { useAnimation } from '~/hooks/useAnimation'
 
 export function Hero() {
 	const { isAnimating } = useAnimation()

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useTabs } from '../../hooks/useTabs'
+import { useTabs } from '~/hooks/useTabs'
 
 interface ProductImageProps {
 	imageSrc: string

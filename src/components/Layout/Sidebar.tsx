@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import Image from 'next/image'
 import { AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai'
 import { RiArrowRightSLine } from 'react-icons/ri'
 
@@ -33,7 +32,7 @@ export function Sidebar() {
 						exit={{ opacity: 0, x: 400 }}
 					>
 						<motion.div
-							className="relative h-[400px] "
+							className="relative h-[400px] overflow-hidden"
 							initial={{ opacity: 0, height: '200px' }}
 							animate={{ opacity: 1, height: '400px' }}
 							transition={{ duration: 1, delay: 0.3 }}

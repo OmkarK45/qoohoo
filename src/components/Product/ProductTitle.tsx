@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useAnimation } from '../../hooks/useAnimation'
+import { useAnimation } from '~/hooks/useAnimation'
 
 export function ProductTitle() {
 	const { isAnimating } = useAnimation()

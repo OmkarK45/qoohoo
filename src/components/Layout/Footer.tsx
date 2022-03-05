@@ -40,7 +40,7 @@ export function Footer() {
 						</Link>
 					</motion.div>
 					<motion.div
-						className=" px-1.5 py-1 rounded border-2 border-gray-200 cursor-pointer"
+						className="px-1.5 py-1 rounded border-2 border-gray-200 cursor-pointer"
 						initial={{ x: 50, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
 						transition={{ duration: 1, delay: 0.2 }}

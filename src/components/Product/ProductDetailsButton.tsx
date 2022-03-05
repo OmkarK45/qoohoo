@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { AiOutlinePlus } from 'react-icons/ai'
 
-import { useAnimation } from '../../hooks/useAnimation'
+import { useAnimation } from '~/hooks/useAnimation'
 
 export function ProductDetailsButton() {
 	const { isAnimating, setIsAnimating } = useAnimation()

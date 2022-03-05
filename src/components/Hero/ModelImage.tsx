@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-import { useAnimation } from '../../hooks/useAnimation'
-import { useTabs } from '../../hooks/useTabs'
+import { useAnimation } from '~/hooks/useAnimation'
+import { useTabs } from '~/hooks/useTabs'
 
 export function ModelImage() {
 	const { isAnimating } = useAnimation()

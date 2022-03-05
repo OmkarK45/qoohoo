@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
-import { useAnimation } from '../../hooks/useAnimation'
+
+import { useAnimation } from '~/hooks/useAnimation'
+
 import Blob2, { Blob1 } from '../Blobs'
 
 export function Blobs() {
