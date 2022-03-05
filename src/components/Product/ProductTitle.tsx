@@ -1,8 +1,15 @@
 import { motion } from 'framer-motion'
+import { useAnimation } from '../../hooks/useAnimation'
 
 export function ProductTitle() {
+	const { isAnimating } = useAnimation()
+
 	return (
-		<div className="uppercase">
+		<motion.div
+			animate={{ y: isAnimating ? 0 : -30 }}
+			transition={{ duration: 1 }}
+			className="uppercase font-bold tracking-tight text-6xl"
+		>
 			<motion.h1
 				animate={{ x: 0, opacity: 1 }}
 				initial={{ x: -300, opacity: 0 }}
@@ -19,6 +26,6 @@ export function ProductTitle() {
 			>
 				V-Neck Shirt
 			</motion.h1>
-		</div>
+		</motion.div>
 	)
 }
