@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react'
+import { createContext, useContext, useState } from 'react'
 import type { Dispatch, SetStateAction, ReactNode } from 'react'
 
 type AnimationProviderType = {
@@ -14,7 +14,8 @@ const INITIAL_STATE: AnimationProviderType = {
 const AnimationContext = createContext(INITIAL_STATE)
 
 export function AnimationProvider({ children }: { children: ReactNode }) {
-	const [isAnimating, setIsAnimating] = React.useState(true)
+	const [isAnimating, setIsAnimating] = useState(true)
+
 	return (
 		<AnimationContext.Provider value={{ isAnimating, setIsAnimating }}>
 			{children}
@@ -27,5 +28,5 @@ export function useAnimation() {
 	if (context === undefined) {
 		throw new Error('useAnimation must be used within a AnimationProvider')
 	}
-	return React.useContext(AnimationContext)
+	return useContext(AnimationContext)
 }
