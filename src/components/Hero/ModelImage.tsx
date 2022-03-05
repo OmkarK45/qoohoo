@@ -1,28 +1,34 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+
 import { useAnimation } from '../../hooks/useAnimation'
+import { useTabs } from '../../hooks/useTabs'
 
 export function ModelImage() {
 	const { isAnimating } = useAnimation()
+	const { currentImage } = useTabs()
 
 	return (
 		<motion.div
-			initial={{ x: '-400px', opacity: 0 }}
-			animate={
-				isAnimating ? { x: '0', opacity: 1 } : { x: '250px', opacity: 1 }
-			}
-			transition={{ duration: 1, bounce: 0 }}
-			exit={{ x: '400px', opacity: 0 }}
 			className="z-[-1] h-full flex-1 flex items-end justify-end"
+			layout
 		>
-			<span className="relative">
+			<motion.span
+				initial={{ x: '-400px', opacity: 0 }}
+				animate={
+					isAnimating ? { x: '0', opacity: 1 } : { x: '250px', opacity: 1 }
+				}
+				transition={{ duration: 1, bounce: 0.3 }}
+				exit={{ x: '400px', opacity: 0 }}
+				className="relative"
+			>
 				<Image
-					src={'/assets/images/1.png'}
+					src={currentImage.imageSrc}
 					height={700}
 					width={500}
 					alt="Model wearning a long jacket and a hat"
 				/>
-			</span>
+			</motion.span>
 		</motion.div>
 	)
 }
